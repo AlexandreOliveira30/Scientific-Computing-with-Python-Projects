@@ -18,17 +18,11 @@ def arithmetic_arranger(problems):
 
   problemsOperatorsString = ''.join(problemsOperators).replace(" ", "")
 
-  print(problemsString)
-  print(problemsOperators)
-  print(problemsNumbers)
-  print(problemsOperatorsString)
-  
   #test_incorrect_operator
   if len(re.findall('[^+-]', problemsOperatorsString)) != 0:
     return "Error: Operator must be '+' or '-'."    
   
   for number in problemsNumbers:
-    print(number)
     number = number.strip()
     #test_only_digits
     if len(re.findall('[^0-9]', number)) != 0:
@@ -37,13 +31,9 @@ def arithmetic_arranger(problems):
     #test_too_many_digits
     if len(number) > 4:
       return "Error: Numbers cannot be more than four digits."
-      
-    
+  
 
   for problemIndex in problems:
     print(problemIndex)
   
-
-  
-
   return arranged_problems
